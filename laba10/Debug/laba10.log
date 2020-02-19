@@ -1,0 +1,58 @@
+﻿  Source.c
+c:\users\user\source\repos\laba10\laba10\source.c(39): warning C4477: "printf": в строке форматирования "%s" требуется аргумент типа "char *", но вариативный аргумент "1" имеет тип "char **"
+c:\users\user\source\repos\laba10\laba10\source.c(39): warning C4477: "printf": в строке форматирования "%s" требуется аргумент типа "char *", но вариативный аргумент "2" имеет тип "char **"
+c:\users\user\source\repos\laba10\laba10\source.c(66): warning C4013: getListLen: нет определения; предполагается "extern" с возвратом типа "int"
+c:\users\user\source\repos\laba10\laba10\source.c(98): warning C4047: =: "node *" отличается по уровням косвенного обращения от "node **"
+c:\users\user\source\repos\laba10\laba10\source.c(114): warning C4047: =: "node *" отличается по уровням косвенного обращения от "node **"
+c:\users\user\source\repos\laba10\laba10\source.c(131): warning C4047: инициализация: "node *" отличается по уровням косвенного обращения от "node **"
+c:\users\user\source\repos\laba10\laba10\source.c(129): warning C4101: tmp: неиспользованная локальная переменная
+c:\users\user\source\repos\laba10\laba10\source.c(169): warning C4477: "fprintf": в строке форматирования "%s" требуется аргумент типа "char *", но вариативный аргумент "1" имеет тип "char **"
+c:\users\user\source\repos\laba10\laba10\source.c(169): warning C4477: "fprintf": в строке форматирования "%s" требуется аргумент типа "char *", но вариативный аргумент "2" имеет тип "char **"
+c:\users\user\source\repos\laba10\laba10\source.c(259): warning C4047: функция: "node **" отличается по уровням косвенного обращения от "node *"
+c:\users\user\source\repos\laba10\laba10\source.c(259): warning C4024: sortByPrice: различные типы для формального и фактического параметров 1
+c:\users\user\source\repos\laba10\laba10\source.c(188): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10586.0\ucrt\stdio.h(205): note:  см. объявление "fopen"
+c:\users\user\source\repos\laba10\laba10\source.c(203): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10586.0\ucrt\stdio.h(1270): note:  см. объявление "scanf"
+c:\users\user\source\repos\laba10\laba10\source.c(209): warning C4477: "fscanf": в строке форматирования "%s" требуется аргумент типа "char *", но вариативный аргумент "1" имеет тип "char *(*)[25]"
+c:\users\user\source\repos\laba10\laba10\source.c(209): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10586.0\ucrt\stdio.h(1193): note:  см. объявление "fscanf"
+c:\users\user\source\repos\laba10\laba10\source.c(211): warning C4477: "fscanf": в строке форматирования "%s" требуется аргумент типа "char *", но вариативный аргумент "1" имеет тип "char *(*)[25]"
+c:\users\user\source\repos\laba10\laba10\source.c(211): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10586.0\ucrt\stdio.h(1193): note:  см. объявление "fscanf"
+c:\users\user\source\repos\laba10\laba10\source.c(213): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10586.0\ucrt\stdio.h(1193): note:  см. объявление "fscanf"
+c:\users\user\source\repos\laba10\laba10\source.c(215): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10586.0\ucrt\stdio.h(1193): note:  см. объявление "fscanf"
+c:\users\user\source\repos\laba10\laba10\source.c(217): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10586.0\ucrt\stdio.h(1193): note:  см. объявление "fscanf"
+c:\users\user\source\repos\laba10\laba10\source.c(231): warning C4477: "scanf": в строке форматирования "%s" требуется аргумент типа "char *", но вариативный аргумент "1" имеет тип "char **"
+c:\users\user\source\repos\laba10\laba10\source.c(231): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10586.0\ucrt\stdio.h(1270): note:  см. объявление "scanf"
+c:\users\user\source\repos\laba10\laba10\source.c(233): warning C4477: "scanf": в строке форматирования "%s" требуется аргумент типа "char *", но вариативный аргумент "1" имеет тип "char **"
+c:\users\user\source\repos\laba10\laba10\source.c(233): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10586.0\ucrt\stdio.h(1270): note:  см. объявление "scanf"
+c:\users\user\source\repos\laba10\laba10\source.c(235): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10586.0\ucrt\stdio.h(1270): note:  см. объявление "scanf"
+c:\users\user\source\repos\laba10\laba10\source.c(237): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10586.0\ucrt\stdio.h(1270): note:  см. объявление "scanf"
+c:\users\user\source\repos\laba10\laba10\source.c(239): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10586.0\ucrt\stdio.h(1270): note:  см. объявление "scanf"
+c:\users\user\source\repos\laba10\laba10\source.c(266): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10586.0\ucrt\stdio.h(1270): note:  см. объявление "scanf"
+c:\users\user\source\repos\laba10\laba10\source.c(270): warning C4477: "scanf": в строке форматирования "%s" требуется аргумент типа "char *", но вариативный аргумент "1" имеет тип "char **"
+c:\users\user\source\repos\laba10\laba10\source.c(270): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10586.0\ucrt\stdio.h(1270): note:  см. объявление "scanf"
+c:\users\user\source\repos\laba10\laba10\source.c(272): warning C4477: "scanf": в строке форматирования "%s" требуется аргумент типа "char *", но вариативный аргумент "1" имеет тип "char **"
+c:\users\user\source\repos\laba10\laba10\source.c(272): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10586.0\ucrt\stdio.h(1270): note:  см. объявление "scanf"
+c:\users\user\source\repos\laba10\laba10\source.c(274): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10586.0\ucrt\stdio.h(1270): note:  см. объявление "scanf"
+c:\users\user\source\repos\laba10\laba10\source.c(276): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10586.0\ucrt\stdio.h(1270): note:  см. объявление "scanf"
+c:\users\user\source\repos\laba10\laba10\source.c(278): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10586.0\ucrt\stdio.h(1270): note:  см. объявление "scanf"
+c:\users\user\source\repos\laba10\laba10\source.c(293): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10586.0\ucrt\stdio.h(205): note:  см. объявление "fopen"
+c:\users\user\source\repos\laba10\laba10\source.c(194): warning C4101: operation: неиспользованная локальная переменная
+  laba10.vcxproj -> C:\Users\USER\source\repos\laba10\Debug\laba10.exe
