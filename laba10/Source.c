@@ -1,187 +1,6 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-struct Book {
-	char* author[25];
-	char* bookName[25];
-	int year;
-	int numberofPage;
-	int price;
-};
 
-struct node {
-	struct node *next;
-	struct Book book;
-};
+#include "Header.h"
 
-
-/////////
-
-
-struct node*ListInit(struct node *head) {
-	head->next = NULL;
-	return head;
-}
-
-
-void insertElem(struct node*el, struct node*newEl) {
-	newEl->next = el->next;
-	el->next = newEl;
-
-}
-
-void printList(struct node*lst) {
-	struct node*p;
-	p = lst;
-	p = p->next;
-	while (p != NULL) {
-
-		printf("%s: '%s',price: %d,number of page:%d,year: %d\n", p->book.author, p->book.bookName, p->book.price, p->book.numberofPage, p->book.year);
-		p = p->next;
-
-	}
-}
-int calcMidPrice(struct node*lst) {
-	struct node*p;
-	p = lst;
-	p = p->next;
-	int counter = 0;
-	int priceSum = 0;
-	while (p != NULL) {
-		priceSum += p->book.price;
-		counter++;
-		p = p->next;
-	}
-	int midPrice = priceSum / counter;
-	return midPrice;
-}
-void deleteBooksWithLowPrice(struct node*lst) {
-	struct node*p;
-	p =lst;
-	struct node*pp = lst;
-	
-	int price = calcMidPrice(pp);
-	printf("Mid price=%d\n", calcMidPrice(pp));
-	int cnt = 0;
-	int len = getListLen(lst);
-	while (p!=NULL) {
-		struct node*prev = p;
-		p = p->next;
-		if (p == NULL)return;
-		if (p->book.price < price) {
-			struct node*pForDel = p;
-			p=prev;
-			p->next = p->next->next;
-
-			free(pForDel);
-		}
-		
-		cnt++;
-	}
-}
-
-
-void elAppend(struct node*lst, struct Book *b) {
-	struct node*newEl = (struct node*)malloc(sizeof(struct node));
-	newEl->book = *b;
-	struct node*p;
-	p = lst;
-	while (p->next != NULL) {
-		p = p->next;
-	}
-	p->next = newEl;
-	newEl->next = NULL;
-}
-
-int getListLen(struct node*lst) {
-	struct node*t;
-	t = &lst;
-	t = t->next;
-	int cnt = 0;
-	while (t->next != NULL) {
-		cnt++;
-		t = t->next;
-	}
-	return cnt;
-}
-
-
-void insertByIndex(struct node*lst, int index, struct Book *b) {
-	if (index > getListLen(lst))return;
-	struct node*newEl = (struct node*)malloc(sizeof(struct node));
-	newEl->book = *b;
-	struct node*p;
-	p = &lst;
-	int counter = 0;
-	p = p->next;
-	index--;
-	while ((counter != index) && (p->next != NULL)) {
-		p = p->next;
-		counter++;
-	}
-	newEl->next = p->next;
-	p->next = newEl;
-}
-
-
-
-void sortByPrice(struct node** lst) {
-	struct node*tmp;
-	struct Book b;
-	struct node*i = lst;
-	struct node*j;
-	for (; i != NULL; i = i->next) {
-		for (j = i; j != NULL; j = j->next) {
-			if (j->book.price < i->book.price) {
-				b = i->book;
-				i->book = j->book;
-				j->book = b;
-
-
-			}
-		}
-	}
-}
-int countLinesInFile(FILE*fp) {
-	char sym;
-	int numberOfAllBooks = 0;
-	sym = getc(fp);
-	do {
-		if (sym == '\n') {
-			numberOfAllBooks++;
-		}
-		sym = getc(fp);
-	} while (sym != EOF);
-	fseek(fp, SEEK_SET, 0);
-	return numberOfAllBooks;
-}
-int menuPrint() {
-	printf("\n1-Read list\n2-Append elements to current list\n3-Print list\n4-Delete books with price, lower than middle price\n5-Sort list\n6-insert elem\n7-save\n");
-	return 1;
-}
-
-void fListWrite(struct node*lst, FILE*fp) {
-	struct node*p;
-	p = lst;
-	p = p->next;
-	while (p != NULL) {
-
-		fprintf(fp, "%s %s %d %d %d\n", p->book.author, p->book.bookName, p->book.year, p->book.numberofPage, p->book.price);
-		p = p->next;
-
-	}
-}
-
-void cleanList(struct node*lst) {
-	lst = lst->next;
-	while (lst != NULL) {
-		struct node*l;
-		l = lst;
-
-		lst = lst->next;
-		free(l);
-	}
-}
 
 int main() {
 	FILE *f = NULL;
@@ -190,33 +9,35 @@ int main() {
 	int numberOfNodes = 0;
 	numberOfNodes = countLinesInFile(f);
 	int isRun = 1;
+
 	struct node list;
+	listInit(&list);
+	char oper = '1';
+
 	char operation;
-	ListInit(&list);
 	menuPrint();
-	struct Book b;
-	char oper;
-    do
+	printf(">>");
+	scanf("%c", &oper);
+	struct Book book;
+	while (isRun)
     {
 
-		printf(">>");
-		scanf("%c", &oper);
 		if (oper == '1') {
 
 			for (int i = 0; i < numberOfNodes; i++) {
 
 
-				fscanf(f, "%s", &b.author);
+				fscanf(f, "%s", &book.author);
 
-				fscanf(f, "%s", &b.bookName);
+				fscanf(f, "%s", &book.bookName);
 
-				fscanf(f, "%d", &b.year);
+				fscanf(f, "%d", &book.year);
 
-				fscanf(f, "%d", &b.numberofPage);
+				fscanf(f, "%d", &book.numberofPage);
 
-				fscanf(f, "%d", &b.price);
-				if (b.year > 0 && b.price >= 0 && b.numberofPage > 0) {
-					elAppend(&list, &b);
+				fscanf(f, "%d", &book.price);
+				if (book.year > 0 && book.price >= 0 && book.numberofPage > 0) {
+					elAppend(&list, &book);
 				}
 				else {
 					printf("Error in file with reading book N%d. Not enought data in file\n", i + 1);
@@ -301,10 +122,11 @@ int main() {
 
 		}
 		
-		
+		printf(">");
+		scanf("%c", &oper);
 
 
-	}while (isRun);
+	}
 
 	printf("\nClick smth to exit");
 	getchar();
